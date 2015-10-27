@@ -3,7 +3,6 @@
 ### CS 4230 Midterm Base Project ###
 
 * Allows the project to be created and to get it running quickly
-* 0.1
 
 ### How do I get set up? ###
 
