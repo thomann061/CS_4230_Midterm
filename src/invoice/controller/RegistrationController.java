@@ -22,11 +22,11 @@ public class RegistrationController extends HttpServlet {
 		String firstName = request.getParameter("firstName");
 		String lastName = request.getParameter("lastName"); 
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("error/register-error.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("error/register_error.jsp");
 		try {
 			AuthenticationModel.registerUser(username, password, firstName, lastName);
 			
-			dispatcher = request.getRequestDispatcher("home.jsp");
+			dispatcher = request.getRequestDispatcher("main.jsp");
 		} catch (Exception e) {
 			request.setAttribute("error", e.toString());
 			e.printStackTrace();
