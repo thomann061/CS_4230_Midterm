@@ -8,7 +8,7 @@
 
 * Clone the repository then open Eclipse
 * File -> New Project -> Dynamic Web Project
-* Project Name = whatever directory you've downloaded the repository into, `cs-4230-midterm-fall-2015` by default
+* Project Name = whatever directory you've downloaded the repository into, `cs-4230-midterm` by default
     * Note that if you have the default name, it will cause problems with the build
     * It's probably easiest to just rename it "midterm"
     * Make sure you have run `git update-index --assume-unchanged src/config.properties`
@@ -28,7 +28,7 @@
 
 ### Contribution guidelines ###
 
-* This project is not to be written to. You will create your own **private** BitBucket repository and give me access to it ("tcmarsh")
+* This project is not to be written to. You will create your own **private** GitHub repository and give me access to it ("tcmarsh")
 * Make sure you are cleaning up any errors or warnings as you go - when I inspect the code, warnings left in the code will be docked points, so keep your code clean
     * The only exception is that _one_ method can have an `unchecked` warning, as I will assume that method is the one you are currently working on
 * Make sure you're following an MVC pattern throughout - that is the point of the course, and I'm going to be evaluating your understanding of MVC and how such a project should go together
