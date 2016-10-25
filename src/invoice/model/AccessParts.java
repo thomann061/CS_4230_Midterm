@@ -34,11 +34,11 @@ public class AccessParts {
         return false;
     }
 
-    public List getParts() {
+    public List<Part> getParts() {
         return parts;
     }
 
-    public void setParts(List parts) {
+    public void setParts(List<Part> parts) {
         this.parts = parts;
     }
 
