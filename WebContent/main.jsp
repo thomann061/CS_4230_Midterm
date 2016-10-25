@@ -4,9 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Awesome System</title>
 </head>
 <body>
-
+<a href="parts.jsp">Parts</a>
+<a href="customers.jsp">Customers</a>
+<a href="manage.jsp">Manage</a>
 </body>
 </html>
