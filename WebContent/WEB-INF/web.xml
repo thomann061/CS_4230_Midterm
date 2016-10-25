@@ -13,4 +13,22 @@
 		<servlet-name>login</servlet-name>
 		<url-pattern>/Login</url-pattern>
 	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>parts</servlet-name>
+		<servlet-class>invoice.controller.PartsController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>parts</servlet-name>
+		<url-pattern>/Parts</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>customers</servlet-name>
+		<servlet-class>invoice.controller.CustomersController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>customers</servlet-name>
+		<url-pattern>/Customers</url-pattern>
+	</servlet-mapping>
 </web-app>
