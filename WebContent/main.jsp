@@ -7,8 +7,14 @@
 <title>Awesome System</title>
 </head>
 <body>
-<a href="parts.jsp">Parts</a>
-<a href="customers.jsp">Customers</a>
-<a href="manage.jsp">Manage</a>
+<form action="Parts" method="post">
+    <input type="submit" value="Parts" /><br />
+</form>
+<form action="Customers" method="post">
+    <input type="submit" value="Customers" /><br />
+</form>
+<form action="Manage" method="post">
+    <input type="submit" value="Manage" /><br />
+</form>
 </body>
 </html>
