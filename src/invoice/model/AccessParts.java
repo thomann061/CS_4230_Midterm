@@ -13,13 +13,20 @@ import java.util.List;
 public class AccessParts {
     private static Connection connection = DatabaseConnectionFactory.getInstance().getDatabaseConnection();
 
-    private ResultSet parts;
+    private List<Part> parts;
 
     public boolean retrieveParts() {
         try {
             PreparedStatement statement = connection.prepareStatement("SELECT * FROM Part");
             ResultSet resultSet = statement.executeQuery();
-            parts = resultSet;
+            while (resultSet.next()) {
+                Part part = new Part();
+                part.setId(resultSet.getInt("id"));
+                part.setPartNumber(resultSet.getString("part_number"));
+                part.setDescription(resultSet.getString("description"));
+                part.setCost(resultSet.getDouble("cost"));
+                parts.add(part);
+            }
             return true;
         } catch (SQLException e) {
             e.printStackTrace();
@@ -27,11 +34,11 @@ public class AccessParts {
         return false;
     }
 
-    public ResultSet getParts() {
+    public List getParts() {
         return parts;
     }
 
-    public void setParts(ResultSet parts) {
+    public void setParts(List parts) {
         this.parts = parts;
     }
 
