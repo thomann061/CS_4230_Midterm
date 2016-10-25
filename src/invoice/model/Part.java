@@ -18,7 +18,7 @@ public class Part {
         this.id = id;
     }
 
-    public String getPart_number() {
+    public String getPartNumber() {
         return partNumber;
     }
 
