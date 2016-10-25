@@ -15,7 +15,7 @@ public class AccessParts {
 
     private ResultSet parts;
 
-    public void parts() {
+    public void retrieveParts() {
         try {
             PreparedStatement statement = connection.prepareStatement("SELECT * FROM Part");
             ResultSet resultSet = statement.executeQuery();
