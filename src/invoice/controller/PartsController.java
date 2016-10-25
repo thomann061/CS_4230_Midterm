@@ -1,8 +1,9 @@
 package invoice.controller;
 
 import invoice.model.AccessParts;
+import java.util.List;
 import invoice.model.AuthenticationModel;
-
+import invoice.model.Part;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -17,11 +18,11 @@ public class PartsController extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		ResultSet partSet;
+		List<Part> partList;
 		AccessParts parts = new AccessParts();
 		if(parts.retrieveParts()) {
-			partSet = parts.getParts();
-			request.setAttribute("parts", partSet);
+			partList = parts.getParts();
+			request.setAttribute("parts", partList);
 			RequestDispatcher dispatch = request.getRequestDispatcher("parts.jsp");
 			dispatch.forward(request, response);
 		} else {
