@@ -15,14 +15,16 @@ public class AccessParts {
 
     private ResultSet parts;
 
-    public void retrieveParts() {
+    public boolean retrieveParts() {
         try {
             PreparedStatement statement = connection.prepareStatement("SELECT * FROM Part");
             ResultSet resultSet = statement.executeQuery();
             parts = resultSet;
+            return true;
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        return false;
     }
 
     public ResultSet getParts() {
